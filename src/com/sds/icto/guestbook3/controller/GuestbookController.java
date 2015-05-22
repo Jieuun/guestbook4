@@ -35,16 +35,16 @@ public class GuestbookController {
 
 	}
 
-	@RequestMapping(value = "/delete/{no}", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete/{no}")
 	public String deleteForm(@PathVariable Long no, Model model) {
 		model.addAttribute("no", no);
 		return "deleteform";
 	}
 
-	@RequestMapping(value = "/delete/{no}", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/delete/{no}", method = RequestMethod.POST)
 	public String delete(@ModelAttribute GuestbookVo vo) {
 		guestbookdao.delete(vo);
 		return "redirect:/index";
-	}
+	}*/
 
 }
